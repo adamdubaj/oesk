@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<VBox prefHeight="400.0" prefWidth="709.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.221" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oesk.controllers.Controller">
+  <children>
+      <TabPane prefHeight="404.0" prefWidth="640.0" stylesheets="@style.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Predkosc internetu">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnRunTest" layoutX="250.0" layoutY="332.0" mnemonicParsing="false" onAction="#runTest"  text="Wykonaj test" />
+                        <Button fx:id="btnShowTestChartOne" layoutX="375.0" layoutY="332.0" mnemonicParsing="false" onAction="#showTestChartOne" text="Pokaz wykres" />
+                        <Label fx:id="labelDownload" alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="44.0" prefHeight="115.0" prefWidth="270.0" stylesheets="@style.css" text="DOWNLOAD" textAlignment="CENTER" />
+                        <Label fx:id="labelUpload" alignment="CENTER" contentDisplay="CENTER" layoutX="422.0" layoutY="44.0" prefHeight="115.0" prefWidth="270.0" stylesheets="@style.css" text="UPLOAD" textAlignment="CENTER" />
+                        <ProgressIndicator fx:id="progress" layoutX="329.0" layoutY="220.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Porownianie">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="btnCompareWithOldies" layoutX="206.0" layoutY="152.0" mnemonicParsing="false" onAction="#compareWithOldies" prefHeight="43.0" prefWidth="298.0" text="Porownaj z wczesniejszymi wynikami" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Autor">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="14.0" layoutY="44.0" prefHeight="91.0" prefWidth="241.0" text="Autor: Adam Dubaj">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="135.0" prefHeight="91.0" prefWidth="241.0" text="Nr albumu: 146792">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+  </children>
+</VBox>
